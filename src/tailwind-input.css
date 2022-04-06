@@ -10,7 +10,7 @@
 .r-2-wrapper        { @apply bg-neutral-800 }
 .r-2-wrapper ul     { @apply flex max-w-7xl mx-auto justify-start gap-6 px-2 }
 .r-2-wrapper ul li  { @apply  text-neutral-400 text-sm pt-4 pb-2 cursor-pointer
-  border-b border-b-transparent hover:border-white hover:text-white translate-y-px}
+  border-b border-b-transparent hover:border-white hover:text-white translate-y-px }
 
 /* navitagion searchbar with dropdown */
 .sb            { @apply flex max-w-full md:max-w-sm lg:max-w-md h-9 text-xs items-center rounded-full outline outline-1 outline-neutral-500 mx-2 }
@@ -24,7 +24,7 @@
 /* reusable nav bar buttons*/
 .btn           { @apply gap-1 items-center text-sm whitespace-nowrap }
 /* reusable model classes */
-.modal-bg      { @apply absolute w-full h-full bg-black bg-opacity-80 z-10}
+.modal-bg      { @apply absolute w-full h-full bg-black bg-opacity-70 z-10}
 
 /* main container*/
-.con-main      { @apply max-w-7xl min-h-screen bg-neutral-900 mx-auto }
+.con-main      { @apply max-w-7xl min-h-screen bg-neutral-900 mx-auto } 
