@@ -1,5 +1,10 @@
 module.exports = {
-  content: ["./views/**.*"],
+  /** Allways remember to update content directories!!!! */
+  content: [
+    "./views/**.*",
+    "./views/partials/**.*",
+    "./public/**.*"
+  ],
   theme: {
     extend: {},
   },

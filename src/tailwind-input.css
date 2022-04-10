@@ -24,7 +24,11 @@
 /* reusable nav bar buttons*/
 .btn           { @apply gap-1 items-center text-sm whitespace-nowrap }
 /* reusable model classes */
-.modal-bg      { @apply absolute w-full h-full bg-black bg-opacity-70 z-10}
+.modal-bg      { @apply absolute w-full h-full bg-black bg-opacity-80 z-10 }
 
 /* main container*/
 .con-main      { @apply max-w-7xl min-h-screen bg-neutral-900 mx-auto } 
+/* TODO-list*/
+.todo-item { @apply px-2 pb-4 leading-4 }
+.todo-item.TODO { @apply text-gray-300 }
+.todo-item.DONE { @apply text-green-200 }

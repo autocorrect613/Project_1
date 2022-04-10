@@ -11,9 +11,40 @@
 </head>
 <body>
   <%- include("./partials/nav-default.ejs") %> 
-  <div class="bg-neutral-800">
+  <div class="bg-[#141414]">
     <div class="con-main">
-    </div>
+      <div class="flex flex-wrap justify-center items-center h-20 mb-3">
+        <a class="text-gray-500 hover:underline hover:text-green-600 whitespace-nowrap" href="https://github.com/autocorrect613/Project_1">Spied šeit,&nbsp;</a>
+        <p class="text-white"> lai redzētu source code šai lapai!</p>
+      </div>
+      <div class="flex w-full relative p-2">
+        <div class="flex flex-col w-1/2 bg-green-900 h-72" >
+          <p class="text-white p-2">TODO list:</p>
+          <p class="todo-item TODO">- Pabeigt un pievienot React apgreidu</p>
+          <p class="todo-item TODO">- Izveidot log failu datu bāzē, kur redzami apdeiti latviski</p>
+        </div>
+        <div class="flex flex-col w-1/2 bg-sky-700 h-72" >
+          <p class="text-white p-2">DONE list:</p>
+          <p class="todo-item DONE">- Ieliku linku source kodam</p>
+          <p class="todo-item DONE">- Izveidoju todo-list</p>
+        </div>
+      </div>
+      <div class="flex text-gray-500 p-2 leading-5">
+        Pēdējās izmaiņas veiktas pirms 
+        <%   
+          let num = Math.round((Date.now() - 1649590694813) / 1000); 
+          let str = " sekundēm";
+          if (num > 59 && num < 3600) {
+            if(num < 120) { num = 1; str = " minūtes" }
+            else { num = Math.round(num / 60); str = " minūtēm" }
+          }
+          else if (num >= 3600) {
+            num = Math.round(num / 3600);
+            str = " stundām";
+          }
+        %>
+        <%= num  %><%= str %>
+      </div>
   </div>
 </body>
 </html> 
