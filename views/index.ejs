@@ -21,6 +21,11 @@
         <div class="flex flex-col w-1/2 bg-green-900 h-72" >
           <p class="text-white p-2">TODO list:</p>
           <p class="todo-item TODO">- Pabeigt un pievienot React apgreidu</p>
+          <p class="todo-item TODO">&#9;- izveidot jaunu projektu un pārmainīt mapju, failu struktūru priekš react</p>
+          <p class="todo-item TODO">&#9;- pārveidot navigācijas EJS failu par komponentiem JSX failos </p>
+          <p class="todo-item TODO">&#9;- izveidot React stila routingu navigācijas joslai (express pagaidām būs tikai viens routs) </p>
+          <p class="todo-item TODO">&#9;- react un express abi reizē būs palaisti zem viena porta - izdomāt, kā menedžēt "./build" direktoriju (reģistrēt tailwind pirms vai pēc build vai kā citādi) </p>
+          <p class="todo-item TODO">&#9;- Pārliecināties, vai un cik jaudīgi ir React routi salīdzinājumā ar express+ejs routiem</p>
           <p class="todo-item TODO">- Izveidot log failu datu bāzē, kur redzami apdeiti latviski</p>
         </div>
         <div class="flex flex-col w-1/2 bg-sky-700 h-72" >
@@ -32,13 +37,15 @@
       <div class="flex text-gray-500 p-2 leading-5">
         Pēdējās izmaiņas veiktas pirms 
         <%   
-          let num = Math.round((Date.now() - 1649590694813) / 1000); 
+          // EJS nākamajā apdeitā pazudīts un tā vietā būs JSX
+          let num = Math.round((Date.now() - 1649630098211) / 1000); 
           let str = " sekundēm";
           if (num > 59 && num < 3600) {
             if(num < 120) { num = 1; str = " minūtes" }
             else { num = Math.round(num / 60); str = " minūtēm" }
           }
           else if (num >= 3600) {
+            if(num < 7200) str = " stundas";
             num = Math.round(num / 3600);
             str = " stundām";
           }
